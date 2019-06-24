@@ -8,6 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
+    public function companies()
+    {
+        return $this->belongsToMany(Company::class);
+    }
+
     use Notifiable;
 
     /**
