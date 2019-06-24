@@ -8,7 +8,7 @@ class Job extends Model
 {
     protected $fillable = [
         'company_id',
-        'opening_data',
+        'opening_date',
         'expected_duration',
         'description',
         'payment_amount'

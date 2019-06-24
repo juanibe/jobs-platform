@@ -14,6 +14,11 @@ class CreateJobsTable extends Migration
     public function up()
     {
         Schema::create('jobs', function (Blueprint $table) {
+            $table->foreign('company_id')->references('id')->on('Company');
+            $table->string('opening_date');
+            $table->string('expected_duration');
+            $table->string('description');
+            $table->double('payment_amount');
             $table->bigIncrements('id');
             $table->timestamps();
         });
